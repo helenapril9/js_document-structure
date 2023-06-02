@@ -15,8 +15,7 @@ function handleQuantityChange(event) {
 }
 function handleAddToCart(event) {
   const product = event.target.closest('.product');
-  const productId = product.dataset.id;
-  const productTitle = product.querySelector('.product__title').textContent;
+  const productId = product.dataset.id;  
   const productImage = product.querySelector('.product__image').src;
   const productQuantity = parseInt(product.querySelector('.product__quantity-value').textContent);
   const cartProduct = document.querySelector(`.cart__product[data-id="${productId}"]`);
